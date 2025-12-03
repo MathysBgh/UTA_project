@@ -1,0 +1,18 @@
+- Modify the function to make it adaptative for monotonic and non-monotonic criterias, not 2 differents ways as we don't know at the beginning wheter a criteria is monotonic or not
+
+- Think how to setup the epsilon to reasonably infer good model as we don't know the grountruth IRL and how to setup breakpoints and how both of them impacts the model
+
+-   What would be interesting to see wheter the model is good or not : 
+
+    1. randomize GT with 30,50,100... what we've done before (the precision of the model)
+    2. for n criterias, see how often the model says wheter or not a criteria is monotonic or not (in % for instance)
+
+
+- Reproduce datas from the paper and try the model
+
+
+Large ε → highly discriminative model, more complex / less smooth
+Small ε → smoother model, less complex and less discriminative
+
+Large L → highly flexible value functions, high computation time (high variance, risk of overfitting)
+Small L → simple and rigid value functions, low computation time (high bias, underfitting)

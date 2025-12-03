@@ -1,0 +1,11 @@
+For next time :
+
+- setting up experimental process to test this algorithm, see what is important to look at
+1 : precision
+2 : proportion of detection the good nature of a criteria : maybe create new uta_gt function to generate single peaked around 0.4 and 0.6
+3 : computation time
+4 : put noise in the data (1%, ..., 10%)
+
+- litterature : find some papers (maybe he doesn't know) and come up with
+
+- Redo correctly of the example of the paper of Ghaderi

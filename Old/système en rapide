@@ -1,0 +1,12 @@
+contraintes :
+tous les u(xi0) = 0 (plus basse valeur de tous les critères)
+sommes sur i des u(xi_L) = 1 (normalisation à 1) (1 max sur la valeur amx de tous les critères)
+pour tous les critères, si A > B, u(A) > u(B)
+
+variables :
+sigma_p, sigma_m
+u(xi_j), i les critères j les breakpoints
+
+u(x) = sommes sur i u(x_i) - sigma_p + sigma_m
+
+objective function : minimiser la somme sur i de sigma_p + sigma_m

@@ -1,0 +1,19 @@
++ noise both
++ pic mis
++ speed of our model
+
+
+
+pourquoi poids différents mais ordre respecté :
+
+Dans UTA, les poids ne sont jamais identifiables indépendamment de la forme des fonctions marginales, car le score dépend que du produit wj x uj
+où 𝑢j(L) est la valeur du dernier breakpoint du critère j
+
+Même en non-monotone, on reconstruit très bien les formes — mais pas les poids, et c’est une limite théorique du modèle
+
+
+Why detection nature of criterias strange : 
+
+Beyond that, the massive addition of alternatives creates more adjacent constraints, which pushes gamma regularization to smooth the functions.
+Non-monotonic curves then become more linear and their concavity becomes less pronounced, 
+which reduces the ability to discriminate between monotonic and non-monotonic

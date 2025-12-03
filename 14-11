@@ -1,0 +1,14 @@
+generate x et y (1000 pairs)
+
+compute uta gt & uta inferr
+estimate probability thaty 2 alt random soit rankés pareil avec uta gt et uta infer
+donc générer 100 paires de x y, calculer les 2 uta gt et infer, et voir si ça donne le même ordre
+
+count number of times they give the same result
+plot a graph : x: number of alternatives in input of uta gt and to compute uta infer (start with 50, and increase)
+    y : estimated probability
+
+
+- (see photo)
+
+- read the paper and prepare questions for next week
