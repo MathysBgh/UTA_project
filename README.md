@@ -1,76 +1,56 @@
-# UTA Project — Learning Additive Value Functions for Multi-Criteria Decision Aiding
+# UTA Project — Preference Learning with Additive Value Models
 
-This repository provides an implementation of **UTA-based preference learning models** for multi-criteria decision aiding (MCDA), with a focus on **monotone and non-monotone additive value functions** and experimental benchmarking.
+This repository contains a research-oriented implementation of **UTA-based preference learning methods** for multi-criteria decision aiding (MCDA).
 
-The project is developed in a research-oriented setting and serves as a basis for comparing classical and recent preference learning approaches based on additive value models.
-
----
-
-## 📌 Project Overview
-
-The goal of this project is to:
-- implement **UTA-style additive value function learning**,
-- study the impact of **monotonicity vs non-monotonicity** assumptions on criteria,
-- provide a clean experimental pipeline for **benchmarking preference learning methods**.
-
-The implementation follows the MCDA literature, starting from classical UTA models and extending them toward more flexible formulations.
+The project focuses on learning **additive value functions** from preference information and serves as a basis for comparing classical and recent approaches in the MCDA literature.
 
 ---
 
-## 🧠 Methods Implemented
+## 🎯 Project Goal
 
-- **UTA (1982)**  
-  Learning additive value functions from preference information.
+The main objective is to study how different assumptions on criteria preferences impact the learned decision model, in particular:
 
-- **Monotone UTA**  
-  Marginal value functions constrained to be monotone.
+- monotone vs non-monotone criteria,
+- classical UTA vs more recent preference learning extensions,
+- robustness and interpretability of learned models.
 
-- **Non-monotone UTA**  
-  Marginal value functions without monotonicity constraints, allowing richer preference shapes.
-
-The models are formulated as **linear optimization problems** with piecewise-linear marginal value functions.
+This work is part of a broader experimental benchmark in a research / MSc context.
 
 ---
 
-## ⚙️ Model Structure
+## 📚 Methods and References
 
-The global value of an alternative \( a \) is defined as  
-\( U(a) = \sum_{j=1}^{m} u_j(g_j(a)) \).
+The project is grounded in the following key papers:
 
+- **UTA (Jacquet-Lagrèze & Siskos, 1982)**  
+  Classical preference disaggregation method learning additive value functions from preference information.
 
-where:
-- \( g_j(a) \) is the performance of alternative \( a \) on criterion \( j \),
-- \( u_j(\cdot) \) is a marginal value function, approximated by piecewise-linear segments.
+- **Ghaderi et al. (EJOR, 2017)**  
+  Extension of UTA allowing **non-monotonic marginal value functions**, with an explicit trade-off between model complexity and discrimination power.
 
-Breakpoints are fixed a priori, and the optimization learns the marginal utility values at these breakpoints.
-
----
-
-## 📥 Inputs
-
-Depending on the experiment, the model takes as input:
-- a set of alternatives described by multiple criteria,
-- preference information derived from a ground-truth value function (synthetic setting).
+More recent methods (e.g. sorting-based and probabilistic extensions) are considered as potential benchmarks on top of this core implementation.
 
 ---
 
-## 📤 Outputs
+## 🧠 What the Model Does (High-Level)
 
-The learning process produces:
-- learned marginal value functions for each criterion,
-- global utility scores for alternatives,
-- experimental results stored in CSV format for further analysis.
+- Takes alternatives described by multiple criteria.
+- Learns marginal value functions for each criterion.
+- Aggregates them into a global score representing preferences.
+- Allows both monotone and non-monotone preference structures.
+
+The focus is on **interpretability and controlled model complexity**, rather than black-box prediction.
 
 ---
 
 ## 🧪 Experiments
 
-Experiments are conducted to compare:
-- monotone vs non-monotone models,
-- approximation quality of the learned value functions,
-- robustness to modeling assumptions.
+Experiments are conducted on synthetic data to:
+- compare monotone and non-monotone models,
+- analyze robustness to modeling assumptions,
+- evaluate approximation quality of learned preferences.
 
-All experiments and visualizations are handled in the provided Jupyter notebook.
+Results are saved for reproducibility and analysis.
 
 ---
 
@@ -79,7 +59,7 @@ All experiments and visualizations are handled in the provided Jupyter notebook.
 ```text
 UTA_project/
 │
-├── uta_core.py                  # Core implementation of UTA models and optimization
-├── uta.ipynb                    # Experimental notebook (learning, evaluation, plots)
-├── uta_experiment__results.csv  # Saved experimental results
+├── uta_core.py                  # Core UTA implementation
+├── uta.ipynb                    # Experiments and analysis
+├── uta_experiment__results.csv  # Experimental results
 └── README.md
