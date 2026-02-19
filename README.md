@@ -34,11 +34,9 @@ The models are formulated as **linear optimization problems** with piecewise-lin
 
 ## ⚙️ Model Structure
 
-The global value of an alternative \( a \) is defined as:
+The global value of an alternative \( a \) is defined as  
+\( U(a) = \sum_{j=1}^{m} u_j(g_j(a)) \).
 
-\[
-U(a) = \sum_{j=1}^{m} u_j(g_j(a))
-\]
 
 where:
 - \( g_j(a) \) is the performance of alternative \( a \) on criterion \( j \),
