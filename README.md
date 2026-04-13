@@ -23,9 +23,6 @@ In practice, the repository touches two related tasks:
 | Ghaderi-style extension | pairwise preferences | non-monotone additive utility |
 | Zhang-style approach | reference assignments | additive sorting model with thresholds |
 
-## What Is In This Repository
-
-Only the files below are currently tracked in Git.
 
 ### Core code
 
@@ -64,8 +61,6 @@ Only the files below are currently tracked in Git.
 If you want to understand the repository quickly, a good order is:
 
 1. `uta.ipynb`
-2. `uta_core.py`
-3. `zhang_core.py`
 4. `zhang_notebook_runner.ipynb`
 5. `uta_vs_zhang_comparison.ipynb`
 
@@ -83,7 +78,7 @@ The project mainly relies on:
 
 - The optimization-based parts require a working **Gurobi** installation and a valid license.
 - The repository is a mix of core code, notebooks, and result files.
-- Some additional local working files may exist outside the tracked Git contents, but this README only describes what is actually present in the repository.
+- Some additional local working files may exist outside the tracked Git contents
 
 ## Authors
 
