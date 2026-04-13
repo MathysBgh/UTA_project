@@ -53,6 +53,7 @@ import numpy as np
 # Your local environment (where you run the notebooks) already uses Gurobi,
 # but this container may not ship gurobipy. We therefore import gurobipy lazily
 # inside the optimization routines.
+# This module is shared by the quick runner and the larger protocol notebook.
 
 def scale_matrix(X: np.ndarray, mode: Optional[str]) -> Tuple[np.ndarray, Dict[str, Any]]:
     """Column-wise scaling (same API as your uta_core.py).
